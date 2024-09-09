@@ -1,0 +1,112 @@
+﻿@model CitasMedicas.Models.HistoriaClinica
+
+@{
+    ViewData["Title"] = "Details";
+    var citasList = ViewBag.Citas as List<CitasMedicas.Models.Cita>;
+}
+
+<h1>Detailles</h1>
+
+<div>
+    <h4>HistoriaClinica</h4>
+    <hr />
+    <dl class="row">
+        @* <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Peso)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Peso)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Altura)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Altura)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PresionArterial)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PresionArterial)
+        </dd> *@
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Paciente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Paciente.Id)
+        </dd>
+    </dl>
+
+    <dl class="row">
+        <table class="table" id="dataTableId">
+            <thead>
+                <tr>
+                    <th>
+                        @* @Html.DisplayNameFor(model => model.CitasHistoriaClinica.FechaCita) *@
+                        Fecha
+                    </th>
+                    <th>
+                        @* @Html.DisplayNameFor(model => model.HoraCita) *@
+                        Hora
+                    </th>
+                    <th>
+                        @* @Html.DisplayNameFor(model => model.Medico) *@
+                        Medico
+                    </th>
+                    <th>
+                        @* @Html.DisplayNameFor(model => model.Diagnostico) *@
+                        Diagnostico
+                    </th>
+                    @* <th>
+                    @Html.DisplayNameFor(model => model.Consultorio)
+                    </th> *@
+                    <th>
+                        @* @Html.DisplayNameFor(model => model.Paciente) *@
+                        Paciente
+                    </th>
+                    <th>
+                        @* @Html.DisplayNameFor(model => model.EstadoCita) *@
+                        Estado
+                    </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in citasList)
+                {
+                    <tr>
+                        <td>
+                            @item.FechaCita.ToString("dd-MM-yyyy")
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.HoraCita)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Medico.NombreCompleto)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Diagnostico)
+                        </td>
+                        @* <td>
+                    @Html.DisplayFor(modelItem => item.Consultorio.NombreConsultorio)
+                    </td> *@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Paciente.NombrePaciente)
+                        </td>
+                        <td>
+                            @* @Html.DisplayFor(modelItem => item.EstadoCita) *@
+                            @(item.EstadoCita == 1 ? "Agendada" : (item.EstadoCita == 2 ? "Atendida" : "Cancelada"))
+                        </td>
+                        
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

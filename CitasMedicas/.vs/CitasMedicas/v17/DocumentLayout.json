@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|c:\\users\\casa\\music\\vers\u00F3n 1.2\\citasmedicas\\citasmedicas\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|solutionrelative:citasmedicas\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|c:\\users\\casa\\music\\vers\u00F3n 1.2\\citasmedicas\\citasmedicas\\views\\enfermeras\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|solutionrelative:citasmedicas\\views\\enfermeras\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|c:\\users\\casa\\music\\vers\u00F3n 1.2\\citasmedicas\\citasmedicas\\models\\enfermera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|solutionrelative:citasmedicas\\models\\enfermera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|c:\\users\\casa\\music\\vers\u00F3n 1.2\\citasmedicas\\citasmedicas\\views\\pacientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|solutionrelative:citasmedicas\\views\\pacientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|c:\\users\\casa\\music\\vers\u00F3n 1.2\\citasmedicas\\citasmedicas\\views\\pacientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|solutionrelative:citasmedicas\\views\\pacientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|c:\\users\\casa\\music\\vers\u00F3n 1.2\\citasmedicas\\citasmedicas\\controllers\\enfermerascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|solutionrelative:citasmedicas\\controllers\\enfermerascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|c:\\users\\casa\\music\\vers\u00F3n 1.2\\citasmedicas\\citasmedicas\\models\\cedulaattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|solutionrelative:citasmedicas\\models\\cedulaattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|c:\\users\\casa\\music\\vers\u00F3n 1.2\\citasmedicas\\citasmedicas\\views\\enfermeras\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|solutionrelative:citasmedicas\\views\\enfermeras\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|c:\\users\\casa\\music\\vers\u00F3n 1.2\\citasmedicas\\citasmedicas\\controllers\\pacientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2054B18-C7CF-44DB-903E-F1055C62E5AF}|CitasMedicas\\CitasMedicas.csproj|solutionrelative:citasmedicas\\controllers\\pacientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "CitasMedicas\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Views\\Shared\\_Layout.cshtml*",
+              "RelativeToolTip": "CitasMedicas\\Views\\Shared\\_Layout.cshtml*",
+              "ViewState": "AQIAABwAAAAAAAAAAAAAACoAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-08T07:48:33.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Views\\Pacientes\\Index.cshtml",
+              "RelativeDocumentMoniker": "CitasMedicas\\Views\\Pacientes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Views\\Pacientes\\Index.cshtml",
+              "RelativeToolTip": "CitasMedicas\\Views\\Pacientes\\Index.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAADMAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-08T07:37:28.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Views\\Pacientes\\Create.cshtml",
+              "RelativeDocumentMoniker": "CitasMedicas\\Views\\Pacientes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Views\\Pacientes\\Create.cshtml",
+              "RelativeToolTip": "CitasMedicas\\Views\\Pacientes\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-08T07:22:19.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enfermera.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Models\\Enfermera.cs",
+              "RelativeDocumentMoniker": "CitasMedicas\\Models\\Enfermera.cs",
+              "ToolTip": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Models\\Enfermera.cs",
+              "RelativeToolTip": "CitasMedicas\\Models\\Enfermera.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAA4wCEAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T07:16:47.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CedulaAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Models\\CedulaAttribute.cs",
+              "RelativeDocumentMoniker": "CitasMedicas\\Models\\CedulaAttribute.cs",
+              "ToolTip": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Models\\CedulaAttribute.cs",
+              "RelativeToolTip": "CitasMedicas\\Models\\CedulaAttribute.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAewCgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T05:57:26.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PacientesController.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Controllers\\PacientesController.cs",
+              "RelativeDocumentMoniker": "CitasMedicas\\Controllers\\PacientesController.cs",
+              "ToolTip": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Controllers\\PacientesController.cs",
+              "RelativeToolTip": "CitasMedicas\\Controllers\\PacientesController.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAAADYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T06:14:00.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Views\\Enfermeras\\Index.cshtml",
+              "RelativeDocumentMoniker": "CitasMedicas\\Views\\Enfermeras\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Views\\Enfermeras\\Index.cshtml",
+              "RelativeToolTip": "CitasMedicas\\Views\\Enfermeras\\Index.cshtml",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAADsAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-08T07:29:43.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Views\\Enfermeras\\Create.cshtml",
+              "RelativeDocumentMoniker": "CitasMedicas\\Views\\Enfermeras\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Views\\Enfermeras\\Create.cshtml",
+              "RelativeToolTip": "CitasMedicas\\Views\\Enfermeras\\Create.cshtml",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAAC8AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-08T07:17:12.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnfermerasController.cs",
+              "DocumentMoniker": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Controllers\\EnfermerasController.cs",
+              "RelativeDocumentMoniker": "CitasMedicas\\Controllers\\EnfermerasController.cs",
+              "ToolTip": "C:\\Users\\Casa\\Music\\Vers\u00F3n 1.2\\CitasMedicas\\CitasMedicas\\Controllers\\EnfermerasController.cs",
+              "RelativeToolTip": "CitasMedicas\\Controllers\\EnfermerasController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAAAEYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T05:49:08.598Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<CitasMedicas.Models.Medicamento>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>MEDICAMENTOS</h1>
+
+<p>
+    <a asp-action="Create">Crear</a>
+</p>
+<table class="table" id="dataTableId">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreMedicamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaRegistro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StockMedicamento)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreMedicamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StockMedicamento)
+            </td>
+            <td>
+                    <div class="actionsContainer">
+                        @Html.Raw($"<a href='{Url.Action("Edit", "Medicamentos", new { id = item.Id })}' class='btn btn-warning tableActionsBtn'><i class='fas fa-edit'></i></a>")
+                        @Html.Raw($"<a href='{Url.Action("Details", "Medicamentos", new { id = item.Id })}' class='btn btn-primary tableActionsBtn'><i class='fas fa-info-circle'></i></a>")
+                        @Html.Raw($"<a href='{Url.Action("Delete", "Medicamentos", new { id = item.Id })}' class='btn btn-danger tableActionsBtn'><i class='fas fa-trash'></i></a>")
+                    </div>
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

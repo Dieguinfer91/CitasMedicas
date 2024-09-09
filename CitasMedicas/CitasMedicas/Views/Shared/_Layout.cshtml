@@ -1,0 +1,197 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    string strTipoUsuario = HttpContextAccessor.HttpContext.Session.GetString("TipoUsuario");
+    int? pacienteId = HttpContextAccessor.HttpContext.Session.GetInt32("PacienteId");
+
+}
+
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    // Obtener el path actual
+    var path = Context.Request.Path.Value;
+    // Puedes dividir el path en partes si necesitas para crear breadcrumbs específicos
+    var pathSegments = path.Trim('/').Split('/');
+    var breadcrumbItems = new List<string>();
+
+    // Agregar "Principal" como primer item del breadcrumb
+    breadcrumbItems.Add("Dashboard");
+
+    // Agregar los segmentos del path al breadcrumb
+    foreach (var segment in pathSegments)
+    {
+        breadcrumbItems.Add(segment);
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CitasMedicas</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sidebar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CitasMedicas.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.0/css/dataTables.dataTables.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark sticky-top">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="/">Citas Médicas</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="navbar-nav ms-auto me-0 me-md-3 my-2 my-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user fa-fw"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        @if (HttpContextAccessor.HttpContext.Session.GetInt32("EstadoLogin") != 1)
+                            @Html.Raw($"<li'><a class='dropdown-item' href='{Url.Action("Login", "Usuario")}'>Iniciar Sesión</a></li>")
+                        else
+                        {
+                            @Html.Raw($"<li'><a class='dropdown-item' href='{Url.Action("Logout", "Usuario")}'>Cerrar Sesión</a></li>")
+                            
+                        }
+                        
+
+                        
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-2" id="sidebar-wrapper">
+
+                <div class="sidebar-heading">Módulos Hospital</div>
+                <div class="list-group list-group-flush">
+
+                    
+                    @Html.Raw($"<div class='list-group'><a href='{Url.Action("Dashboard", "Home", new { area = "" })}'><i class='fas fa-tachometer-alt i-class'></i>Dashboard</a></div>")
+                    @if (strTipoUsuario == "Admin")
+                    {
+                        @Html.Raw($"<div class='list-group'><a href='{Url.Action("Index", "Usuario")}'><i class='fas fa-users i-class'></i>Usuarios</a></div>")
+                    }
+
+                    @if (strTipoUsuario == "Admin")
+                    @Html.Raw($"<div class='list-group'><a href='{Url.Action("Index", "Pacientes")}'><i class='fas fa-id-card i-class'></i>Pacientes</a></div>")
+                    @if (strTipoUsuario == "Admin")
+                    @Html.Raw($"<div class='list-group'><a href='{Url.Action("Index", "Medicos")}'><i class='fas fa-clinic-medical i-class'></i>Médicos</a></div>")
+                    @* @if (new[] { "Admin", "Medico", "" }.Contains(strTipoUsuario))
+                    @Html.Raw($"<div class='list-group'><a href='{Url.Action("Index", "Citas")}'><i class='fas fa-calendar i-class'></i>Citas</a></div>") *@
+                    @* @if (strTipoUsuario == "Admin") *@
+                        @Html.Raw($"<div class='list-group'><a href='{Url.Action("Index", "Citas")}'><i class='fas fa-calendar i-class'></i>Citas</a></div>")
+                    @* @if (strTipoUsuario == "Medico")
+                        @Html.Raw($"<div class='list-group'><a href='{Url.Action("CitasMedico", "Citas")}'><i class='fas fa-calendar i-class'></i>Citas</a></div>") *@
+                    @if (strTipoUsuario == "Admin")
+                    @Html.Raw($"<div class='list-group'><a href='{Url.Action("Index", "Medicamentos")}'><i class='fas fa-medkit i-class'></i>Farmacia</a></div>")
+                    @if (strTipoUsuario == "Admin")
+                    @Html.Raw($"<div class='list-group'><a href='{Url.Action("Index", "Especialidades")}'><i class='fas fa-table i-class'></i>Especialidades</a></div>")
+                    @if (strTipoUsuario == "Admin")
+                    @Html.Raw($"<div class='list-group'><a href='{Url.Action("Index", "Consultorios")}'><i class='fas fa-table i-class'></i>Consultorios</a></div>")
+
+                    @if (strTipoUsuario == "Admin" || strTipoUsuario == "Medico")
+                    {
+                        @Html.Raw($"<div class='list-group'><a href='{Url.Action("Index", "HistoriasClinicas")}'><i class='fas fa-table i-class'></i>Historias Clinicas</a></div>")
+                    }
+                    else
+                    {
+                        @Html.Raw($"<div class='list-group'><a href='{Url.Action("Details", "HistoriasClinicas", new { id = pacienteId })}'><i class='fas fa-table i-class'></i>Historias Clinicas</a></div>")
+                    }
+
+                    @if (strTipoUsuario == "Admin")
+                        @Html.Raw($"<div class='list-group'><a href='{Url.Action("Index", "Enfermeras")}'><i class='fas fa-user-nurse i-class'></i>Enfermeras</a></div>")
+
+
+
+
+                    @*@Html.ActionLink("Create Medicos", "Create", "Medicos", new { area = "" }, new { @class = "list-group" })*@
+                </div>
+            </div>
+            <div class="col-md-10" id="page-content-wrapper">
+                <div class="container-fluid p-1">
+
+                    @* <ol class="breadcrumb mb-4 mt-4">
+                        <li class="breadcrumb-item"><a href="index.html">Principal</a></li>
+                        <li class="breadcrumb-item active">Medico</li>
+                    </ol> *@
+                    <ol class="breadcrumb mb-4 mt-4">
+                        @for (var i = 0; i < breadcrumbItems.Count; i++)
+                        {
+                            <li class="breadcrumb-item @(i == breadcrumbItems.Count - 1 ? "active" : "")">
+                                @if (i < breadcrumbItems.Count - 1)
+                                {
+                                    <a href="#">@breadcrumbItems[i]</a>
+                                }
+                                else
+                                {
+                                    @breadcrumbItems[i]
+                                }
+                            </li>
+                        }
+                    </ol>
+
+                    <div class="card">
+                        @* <div class="card-header">
+                            <i class="fas fa-id-card me-1"></i> Lista Medicos
+                        </div> *@
+
+                        <div class="card-body">
+                            @* <div class="row">
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-primary">Crear Medico</button>
+                                </div>
+                            </div>
+
+
+                            <hr /> *@
+                            <div class="p-2">
+                                @RenderBody()
+                                @*<hr />*@
+
+                            </div>
+                            @*<footer>
+                            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+                            </footer>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - CitasMedicas - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+    <script src="https://cdn.datatables.net/2.1.0/js/dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dataTableId').DataTable({
+                responsive: true,
+                "language": {
+                    url: '//cdn.datatables.net/plug-ins/2.1.0/i18n/es-MX.json',
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

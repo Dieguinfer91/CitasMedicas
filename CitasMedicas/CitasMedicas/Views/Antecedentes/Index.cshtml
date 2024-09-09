@@ -1,0 +1,40 @@
+﻿@model IEnumerable<CitasMedicas.Models.Antecedente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" id="dataTableId">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DescripcionAntecedente)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionAntecedente)
+            </td>
+            <td>
+                    <div class="actionsContainer">
+                        @Html.Raw($"<a href='{Url.Action("Edit", "Medicos", new { id = item.Id })}' class='btn btn-warning tableActionsBtn'>Editar</a>")
+                        @Html.Raw($"<a href='{Url.Action("Details", "Medicos", new { id = item.Id })}' class='btn btn-primary tableActionsBtn'>Detalles</a>")
+                        @Html.Raw($"<a href='{Url.Action("Delete", "Medicos", new { id = item.Id })}' class='btn btn-danger tableActionsBtn'>Eliminar</a>")
+                    </div>
+                @* <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

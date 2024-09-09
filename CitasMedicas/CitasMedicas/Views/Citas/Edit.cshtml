@@ -1,0 +1,192 @@
+﻿@model CitasMedicas.Models.Cita
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "Edit";
+    var tipoUsuario = HttpContextAccessor.HttpContext.Session.GetString("TipoUsuario");
+    var esMedico = tipoUsuario == "Medico";
+    //var txtConsultorio = Model.Consultorio.NombreConsultorio;
+    var txtPaciente = Model.Paciente.NombrePaciente;
+    var txtMedico = Model.Medico.NombreCompleto;
+    var cita = ViewBag.historiaClinica;
+    ICollection<MedicamentoReceta> medicamentosReceta = Model.Receta;
+}
+
+<h1>Edit</h1>
+
+<h4>Cita</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="FechaCita" class="control-label"></label>
+                <input asp-for="FechaCita" type="date" class="form-control" />
+                <span asp-validation-for="FechaCita" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoraCita" class="control-label"></label>
+                @if (esMedico)
+                {
+                    <input value="@(Model.HoraCita)" disabled class="form-control" />
+                    <input type="hidden" value="@(Model.HoraCita)" name="HoraCita" class="form-control" />
+                }
+                else
+                {
+                    <select asp-for="HoraCita" class="form-control">
+                        <option value="9:00">9:00</option>
+                        <option value="9:20">9:20</option>
+                        <option value="9:40">9:40</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:20">10:20</option>
+                        <option value="10:40">10:40</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:20">11:20</option>
+                        <option value="11:40">11:40</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:20">12:20</option>
+                        <option value="12:40">12:40</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:20">14:20</option>
+                        <option value="14:40">14:40</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:20">15:20</option>
+                        <option value="15:40">15:40</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:20">16:20</option>
+                        <option value="16:40">16:40</option>
+                    </select>
+
+                }
+
+                <span asp-validation-for="HoraCita" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MedicoId" class="control-label"></label>
+                @if (esMedico)
+                {
+                    <input value="@(txtMedico)" disabled class="form-control" />
+                    <input type="hidden" value="@(Model.MedicoId)" name="MedicoId" class="form-control" />
+                }
+                else
+                {
+                    <select asp-for="MedicoId" class="form-control" asp-items="ViewBag.MedicoId"></select>
+                }
+
+                <span asp-validation-for="MedicoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Diagnostico" class="control-label"></label>
+                <input asp-for="Diagnostico" class="form-control" />
+                <span asp-validation-for="Diagnostico" class="text-danger"></span>
+            </div>
+            @* <div class="form-group">
+            <label asp-for="ConsultorioId" class="control-label"></label>
+            @if(esMedico)
+            {
+            <input value="@(txtConsultorio)" disabled class="form-control" />
+            <input type="hidden" value="@(Model.ConsultorioId)" name="ConsultorioId" class="form-control" />
+            }
+            else
+            {
+            <select asp-for="ConsultorioId" class="form-control" asp-items="ViewBag.ConsultorioId"></select>
+            }
+
+
+            <span asp-validation-for="ConsultorioId" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label asp-for="PacienteId" class="control-label"></label>
+
+                @if (esMedico)
+                {
+                    <input value="@(txtPaciente)" disabled class="form-control" />
+                    <input type="hidden" value="@(Model.PacienteId)" name="PacienteId" class="form-control" />
+                }
+                else
+                {
+                    <select asp-for="PacienteId" class="form-control" asp-items="ViewBag.PacienteId"></select>
+                }
+                <span asp-validation-for="PacienteId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoCita" class="control-label"></label>
+                <select asp-for="EstadoCita" class="form-control">
+                    <option value="1">Agendada</option>
+                    <option value="2">Atendida</option>
+                    <option value="3">Cancelada</option>
+
+                </select>
+                <span asp-validation-for="EstadoCita" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-8">
+        Receta
+        <p>
+            @Html.Raw($"<a href='{Url.Action("Create", "MedicamentosRecetas", new { citaId = Model.Id })}' class='btn btn-primary'>Agregar</a>")
+        </p>
+
+        <table class="table" id="dataTableId">
+            <thead>
+                <tr>
+                    <th>
+                        Nombre Medicamento
+                    </th>
+                    <th>
+                        Cantidad
+                    </th>
+                    <th>
+                        Dosis
+                    </th>
+                    <th>
+                        Instrucciones
+                    </th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in medicamentosReceta)
+                {
+                    
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Medicamento.NombreMedicamento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cantidad)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Dosis)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Instrucciones)
+                        </td>
+                        <td>
+                            <div class="actionsContainer">
+                                @* @Html.Raw($"<a href='{Url.Action("Edit", "MedicamentosRecetas", new { id = item.Id })}' class='btn btn-warning tableActionsBtn'><i class='fas fa-edit'></i></a>") *@
+                                @Html.Raw($"<a href='{Url.Action("Delete", "MedicamentosRecetas", new { id = item.Id })}' class='btn btn-danger tableActionsBtn'><i class='fas fa-trash'></i></a>")
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

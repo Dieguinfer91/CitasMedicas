@@ -1,0 +1,56 @@
+﻿@model IEnumerable<CitasMedicas.Models.HistoriaClinica>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>HISTORIA CLÍNICA</h1>
+
+@* <p>
+    <a asp-action="Create">Crear</a>
+</p> *@
+<table class="table" id="dataTableId">
+    <thead>
+        <tr>
+            @* <th>
+                @Html.DisplayNameFor(model => model.Peso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Altura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PresionArterial)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.Paciente)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.Peso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Altura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresionArterial)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Paciente.NombrePaciente)
+            </td>
+            <td>
+                    <div class="actionsContainer">
+                        @* @Html.Raw($"<a href='{Url.Action("Edit", "HistoriasClinicas", new { id = item.Id })}' class='btn btn-warning tableActionsBtn'>Editar</a>") *@
+                        @Html.Raw($"<a href='{Url.Action("Details", "HistoriasClinicas", new { id = item.Id })}' class='btn btn-primary tableActionsBtn'>Detalles</a>")
+                        @* @Html.Raw($"<a href='{Url.Action("Delete", "HistoriasClinicas", new { id = item.Id })}' class='btn btn-danger tableActionsBtn'>Eliminar</a>") *@
+                    </div>
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

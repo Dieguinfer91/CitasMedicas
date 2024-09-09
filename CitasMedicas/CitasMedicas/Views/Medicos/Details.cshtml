@@ -1,0 +1,97 @@
+﻿@model CitasMedicas.Models.Medico
+
+@{
+    ViewData["Title"] = "Details";
+    var especialidadesModel = Model.Especialidades;
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Medico</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CedulaMedico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CedulaMedico)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreMedico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreMedico)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ApellidoMedico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ApellidoMedico)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CorreoMedico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CorreoMedico)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TelefonoMedico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TelefonoMedico)
+        </dd>
+        @* <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Especialidad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Especialidad.Id)
+        </dd> *@
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaNacimientoMedico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaNacimientoMedico)
+        </dd>
+
+    </dl>
+
+    <a class="btn btn-primary" href="@(Url.Action("AgregarEspecialidad", "Medicos",new {id=Model.Id}))">Agregar Especialidad</a>
+
+    <dl class="row">
+        <table class="table" id="dataTableId">
+            <thead>
+                <tr>
+                    <th>
+                        @* @Html.DisplayNameFor(especialidadesModel => especialidadesModel.) *@
+                        Especialidades
+                    </th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in especialidadesModel)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DescripcionEspecialidad)
+                        </td>
+                        <td>
+                            <div class="actionsContainer">
+                                @Html.Raw($"<a href='{Url.Action("Delete", "Medicos", new { id = item.Id })}' class='btn btn-danger tableActionsBtn'>Eliminar</a>")
+                            </div>
+                            @* <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> *@
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </dl>
+
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

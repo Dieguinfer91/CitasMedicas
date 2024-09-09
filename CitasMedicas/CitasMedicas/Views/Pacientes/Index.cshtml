@@ -1,0 +1,76 @@
+﻿@model IEnumerable<CitasMedicas.Models.Paciente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>PACIENTES</h1>
+
+<p>
+    <a asp-action="Create">Nuevo Paciente</a>
+</p>
+<table class="table" id="dataTableId">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CedulaPaciente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombrePaciente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimientoPaciente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CorreoPaciente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CedulaPaciente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombrePaciente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacimientoPaciente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorreoPaciente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonoPaciente)
+            </td>
+            <td>
+                    <div class="actionsContainer">
+                        <form asp-action="SeleccionarEspecialidad" asp-controller="Citas">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+      
+                            <input type="hidden" name="PacienteId" value="@(item.Id)" />
+                            <input type="hidden" name="PacienteNombre" value="@(item.NombrePaciente)" />
+
+                            <div class="form-group">
+                                <input type="submit" value="Agendar Cita" class="btn btn-primary" />
+                            </div>
+                        </form>
+
+
+                        @Html.Raw($"<a href='{Url.Action("Edit", "Pacientes", new { id = item.Id })}' class='btn btn-warning tableActionsBtn'><i class='fas fa-edit'></i></a>")
+                        @Html.Raw($"<a href='{Url.Action("Details", "Pacientes", new { id = item.Id })}' class='btn btn-primary tableActionsBtn'><i class='fas fa-info-circle'></i></a>")
+                        @Html.Raw($"<a href='{Url.Action("Delete", "Pacientes", new { id = item.Id })}' class='btn btn-danger tableActionsBtn'><i class='fas fa-trash'></i></a>")
+
+                        
+                    </div>
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

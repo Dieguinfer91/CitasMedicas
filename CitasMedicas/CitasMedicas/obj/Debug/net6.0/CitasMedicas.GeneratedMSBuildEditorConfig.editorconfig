@@ -1,0 +1,279 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CitasMedicas
+build_property.RootNamespace = CitasMedicas
+build_property.ProjectDir = C:\Users\Casa\Music\Versón 1.2\CitasMedicas\CitasMedicas\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Casa\Music\Versón 1.2\CitasMedicas\CitasMedicas
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Antecedentes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Antecedentes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Antecedentes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Antecedentes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Antecedentes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW50ZWNlZGVudGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Citas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Citas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Citas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Citas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Citas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Citas/SeleccionarEspecialidad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcU2VsZWNjaW9uYXJFc3BlY2lhbGlkYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Consultorios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdG9yaW9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Consultorios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdG9yaW9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Consultorios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdG9yaW9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Consultorios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdG9yaW9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Consultorios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdG9yaW9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Enfermeras/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mZXJtZXJhc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Enfermeras/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mZXJtZXJhc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Enfermeras/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mZXJtZXJhc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Enfermeras/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mZXJtZXJhc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Enfermeras/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mZXJtZXJhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Especialidades/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNwZWNpYWxpZGFkZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Especialidades/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNwZWNpYWxpZGFkZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Especialidades/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNwZWNpYWxpZGFkZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Especialidades/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNwZWNpYWxpZGFkZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Especialidades/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNwZWNpYWxpZGFkZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/HistoriasClinicas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWFzQ2xpbmljYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/HistoriasClinicas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWFzQ2xpbmljYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/HistoriasClinicas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWFzQ2xpbmljYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/HistoriasClinicas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWFzQ2xpbmljYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/HistoriasClinicas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWFzQ2xpbmljYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Home/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/MedicamentosRecetas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zUmVjZXRhc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/MedicamentosRecetas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zUmVjZXRhc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/MedicamentosRecetas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zUmVjZXRhc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/MedicamentosRecetas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zUmVjZXRhc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/MedicamentosRecetas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zUmVjZXRhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Medicamentos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Medicamentos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Medicamentos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Medicamentos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Medicamentos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Medicos/AgregarEspecialidad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xBZ3JlZ2FyRXNwZWNpYWxpZGFkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Medicos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Medicos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Medicos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Medicos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Medicos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Pacientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Pacientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Pacientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Pacientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Pacientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Shared/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFjY2Vzc0RlbmllZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Shared/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Shared/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Usuario/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Casa/Music/Versón 1.2/CitasMedicas/CitasMedicas/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mphr5ar60c

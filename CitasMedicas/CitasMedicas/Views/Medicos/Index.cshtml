@@ -1,0 +1,77 @@
+﻿@model IEnumerable<CitasMedicas.Models.Medico>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>MÉDICOS</h1>
+
+<p>
+    <a asp-action="Create">Nuevo Médico</a>
+</p>
+<table class="table" id="dataTableId">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CedulaMedico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreMedico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApellidoMedico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CorreoMedico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefonoMedico)
+            </th>
+            <th>
+                Consultorio
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimientoMedico)
+            </th>
+
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CedulaMedico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreMedico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoMedico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorreoMedico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonoMedico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Consultorio.NombreConsultorio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacimientoMedico)
+            </td>
+            <td>
+                <div class="actionsContainer">
+                        @Html.Raw($"<a href='{Url.Action("Edit", "Medicos", new { id = item.Id })}' class='btn btn-warning tableActionsBtn'><i class='fas fa-edit'></i></a>")
+                        @Html.Raw($"<a href='{Url.Action("Details", "Medicos", new { id = item.Id })}' class='btn btn-primary tableActionsBtn'><i class='fas fa-info-circle'></i></a>")
+                        @Html.Raw($"<a href='{Url.Action("Delete", "Medicos", new { id = item.Id })}' class='btn btn-danger tableActionsBtn'><i class='fas fa-trash'></i></a>")
+                </div>
+                
+
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

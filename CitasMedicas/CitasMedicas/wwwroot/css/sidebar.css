@@ -1,0 +1,50 @@
+﻿/* Custom styles for the sidebar */
+#sidebar-wrapper {
+    min-height: 100vh;
+    /*overflow-y: auto;*/ /* Permite el scroll vertical */
+    /*position: fixed;*/ /* Fija el sidebar a la izquierda */
+
+    /*top: 0;
+    left: 0;
+    bottom: 0;*/
+    background-color: #212529 !important;
+    color: #7a8480 !important;
+}
+
+    #sidebar-wrapper .sidebar-heading {
+        padding: 0.875rem 1.25rem;
+        font-size: 1.5rem;
+        background-color: #212529 !important;
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    #sidebar-wrapper .list-group a {
+        width: 100%;
+        background-color: #212529 !important;
+        color: rgba(255, 255, 255, 0.5) !important;
+        text-decoration: none;
+        font-size: 1.2em;
+        margin-right: 0.5rem;
+        display: flex;
+        margin-bottom: 0.5rem;
+    }
+
+
+
+.container.body-content {
+    padding: 20px;
+}
+
+.navbar {
+    height: 56px;
+    padding: 0.75rem 1rem;
+}
+#sidebarToggle
+{
+    color: white;
+}
+
+.i-class{
+    margin-right: 0.4em;
+    width: 1.2em;
+}

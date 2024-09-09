@@ -1,0 +1,104 @@
+﻿@model CitasMedicas.Models.Cita
+
+@{
+    ViewData["Title"] = "Create";
+    var nombrePaciente = ViewBag.NombrePaciente;
+    var idPaciente = ViewBag.IdPaciente;
+    
+}
+
+<h1>Creación</h1>
+
+<h4>Cita</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FechaCita" class="control-label"></label>
+                <input asp-for="FechaCita" type="date" class="form-control"/>
+                <span asp-validation-for="FechaCita" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoraCita" class="control-label"></label>
+                <select asp-for="HoraCita" class="form-control">
+                    <option value="9:00">9:00</option>
+                    <option value="9:20">9:20</option>
+                    <option value="9:40">9:40</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:20">10:20</option>
+                    <option value="10:40">10:40</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:20">11:20</option>
+                    <option value="11:40">11:40</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:20">12:20</option>
+                    <option value="12:40">12:40</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:20">14:20</option>
+                    <option value="14:40">14:40</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:20">15:20</option>
+                    <option value="15:40">15:40</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:20">16:20</option>
+                    <option value="16:40">16:40</option>
+                </select>
+                <span asp-validation-for="HoraCita" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MedicoId" class="control-label"></label>
+                <select asp-for="MedicoId" class ="form-control" asp-items="ViewBag.MedicoId"></select>
+                <span asp-validation-for="MedicoId" class="text-danger"></span>
+            </div>
+            @* <div class="form-group">
+                <label asp-for="ConsultorioId" class="control-label"></label>
+                <select asp-for="ConsultorioId" class ="form-control" asp-items="ViewBag.ConsultorioId"></select>
+                <span asp-validation-for="ConsultorioId" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label asp-for="PacienteId" class="control-label"></label>
+                @if (!(nombrePaciente=="" || nombrePaciente==null))
+                {
+                    <input value="@(nombrePaciente)" disabled class="form-control" />
+                    <input type="hidden" value="@(idPaciente)" name="PacienteId" class="form-control" />
+                }
+                else
+                {
+                    <select asp-for="PacienteId" class="form-control" asp-items="ViewBag.PacienteId"></select>
+                }
+                
+                <span asp-validation-for="PacienteId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @* <label asp-for="EstadoCita" class="control-label"></label>
+                <input asp-for="EstadoCita" class="form-control" />
+                <span asp-validation-for="EstadoCita" class="text-danger"></span> *@
+                <label asp-for="EstadoCita" class="control-label"></label>
+                @* <select name="EstadoCita" disabled class="form-control">
+                    <option value="1">Agendada</option> *@
+
+                <input value="Agendada" disabled class="form-control" />
+                <input type="hidden" value="1" name="EstadoCita" class="form-control" />
+                    
+                    @* <option value="2">Atendida</option> *@
+                    @* <option value="3">Cancelada</option> *@
+                    
+                </select>
+                <span asp-validation-for="EstadoCita" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

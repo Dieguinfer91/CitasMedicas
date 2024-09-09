@@ -1,0 +1,38 @@
+﻿@model IEnumerable<CitasMedicas.Models.Especialidad>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>ESPECIALIDAD</h1>
+
+<p>
+    <a asp-action="Create">Nueva Especialidad</a>
+</p>
+<table class="table" id="dataTableId">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DescripcionEspecialidad)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionEspecialidad)
+            </td>
+            <td>
+                    <div class="actionsContainer">
+                        @Html.Raw($"<a href='{Url.Action("Edit", "Especialidades", new { id = item.Id })}' class='btn btn-warning tableActionsBtn'><i class='fas fa-edit'></i></a>")
+                        @Html.Raw($"<a href='{Url.Action("Details", "Especialidades", new { id = item.Id })}' class='btn btn-primary tableActionsBtn'><i class='fas fa-info-circle'></i></a>")
+                        @Html.Raw($"<a href='{Url.Action("Delete", "Especialidades", new { id = item.Id })}' class='btn btn-danger tableActionsBtn'><i class='fas fa-trash'></i></a>")
+                    </div>
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<CitasMedicas.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>USUARIOS</h1>
+
+<p>
+    <a asp-action="Create">Crear Nuevo</a>
+</p>
+<table class="table" id="dataTableId">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoUsuario)
+            </th>
+            
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoUsuario)
+                </td>
+               
+                <td>
+                    <div class="actionsContainer">
+                        
+                        @Html.Raw($"<a href='{Url.Action("Delete", "Usuarios", new { id = item.Id })}' class='btn btn-danger tableActionsBtn'>Eliminar</a>")
+                    </div>
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

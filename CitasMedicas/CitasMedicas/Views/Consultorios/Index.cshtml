@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CitasMedicas.Models.Consultorio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>CONSULTORIO</h1>
+
+<p>
+    <a asp-action="Create">Nuevo Consultorio</a>
+</p>
+<table class="table" id="dataTableId">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreConsultorio)
+            </th>
+            <th>
+                Estado Consultorio
+            </th>
+            <th>
+                Descripción Consultorio
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreConsultorio)
+            </td>
+            <td>
+                @(item.Medico!=null?"Ocupado":"Libre")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionConsultorio)
+            </td>
+            <td>
+                <div class="actionsContainer">
+                        @Html.Raw($"<a href='{Url.Action("Edit", "Consultorios", new { id = item.Id })}' class='btn btn-warning tableActionsBtn'><i class='fas fa-edit'></i></a>")
+                        @Html.Raw($"<a href='{Url.Action("Details", "Consultorios", new { id = item.Id })}' class='btn btn-primary tableActionsBtn'><i class='fas fa-info-circle'></i></a>")
+                        @Html.Raw($"<a href='{Url.Action("Delete", "Consultorios", new { id = item.Id })}' class='btn btn-danger tableActionsBtn'><i class='fas fa-trash'></i></a>")
+                </div>
+                @* <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

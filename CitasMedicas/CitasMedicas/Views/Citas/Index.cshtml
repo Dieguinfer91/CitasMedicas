@@ -1,0 +1,111 @@
+﻿@model IEnumerable<CitasMedicas.Models.Cita>
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "Index";
+    var pacienteId = HttpContextAccessor.HttpContext.Session.GetInt32("PacienteId");
+    var nombrePaciente = HttpContextAccessor.HttpContext.Session.GetString("PacienteNombre");
+    var tipoUsuario = HttpContextAccessor.HttpContext.Session.GetString("TipoUsuario");
+}
+
+<h1>Principal</h1>
+
+@if (tipoUsuario == "Paciente")
+{
+<form asp-action="SeleccionarEspecialidad" asp-controller="Citas">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <input type="hidden" name="PacienteId" value="@(pacienteId)" />
+    <input type="hidden" name="PacienteNombre" value="@(nombrePaciente)" />
+
+    <div class="form-group">
+        <input type="submit" value="Agendar Cita" class="btn btn-primary" />
+    </div>
+</form>
+}
+<p>
+   
+</p>
+<table class="table" id="dataTableId">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCita)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoraCita)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Diagnostico)
+            </th>
+            @* <th>
+                @Html.DisplayNameFor(model => model.Consultorio)
+            </th> *@
+            <th>
+                @Html.DisplayNameFor(model => model.Paciente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoCita)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @item.FechaCita.ToString("dd-MM-yyyy")
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoraCita)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medico.NombreCompleto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diagnostico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paciente.NombrePaciente)
+            </td>
+            <td>
+                    @(item.EstadoCita == 1 ? "Agendada" : (item.EstadoCita == 2 ? "Atendida" : "Cancelada"))
+            </td>
+            <td>
+                    <div class="actionsContainer">
+
+                        @if (HttpContextAccessor.HttpContext.Session.GetString("TipoUsuario") == "Admin" ||
+                       HttpContextAccessor.HttpContext.Session.GetString("TipoUsuario") == "Medico")
+                            @Html.Raw($"<a href='{Url.Action("Edit", "Citas", new { id = item.Id })}' class='btn btn-warning tableActionsBtn'><i class='fas fa-edit'></i></a>")
+
+
+
+                        @if (HttpContextAccessor.HttpContext.Session.GetString("TipoUsuario") == "Paciente")
+                        {
+                            <form asp-action="Edit" asp-controller="Citas" method="post">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" name="Id" asp-for="@(item.Id)" />
+                                
+                                <div class="form-group">
+                                    <input type="submit" @(item.EstadoCita==3?"disabled":"") value="Cancelar Cita" class="btn btn-danger" />
+                                </div>
+                            </form>
+                        }
+
+                        @Html.Raw($"<a href='{Url.Action("Details", "Citas", new { id = item.Id })}' class='btn btn-primary tableActionsBtn'><i class='fas fa-info-circle'></i></a>")
+
+                        @if (HttpContextAccessor.HttpContext.Session.GetString("TipoUsuario") == "Admin")
+                            @Html.Raw($"<a href='{Url.Action("Delete", "Citas", new { id = item.Id })}' class='btn btn-danger tableActionsBtn'><i class='fas fa-trash'></i></a>")
+
+
+                    </div>
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
